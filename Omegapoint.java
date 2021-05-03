@@ -9,15 +9,15 @@ public class Omegapoint {
         BufferedReader reader = new BufferedReader(
             new InputStreamReader(System.in));
 
+		PersonalNumberChecker pChecker = new PersonalNumberChecker();
+		SamordningNumberChecker sChecker = new SamordningNumberChecker();
+		OrganisationNumberChecker oChecker = new OrganisationNumberChecker();
+
         while (true) {
 
         	String personnummer = reader.readLine();
 
 			personnummer = personnummer.replace(" ","");
-
-        	PersonalNumberChecker pChecker = new PersonalNumberChecker();
-        	SamordningNumberChecker sChecker = new SamordningNumberChecker();
-        	OrganisationNumberChecker oChecker = new OrganisationNumberChecker();
 
         	if (pChecker.ValidityCheck(personnummer)) {
         		System.out.println("Valid personal number");
